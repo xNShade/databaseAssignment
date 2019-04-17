@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<div id="store-listbox-and-button">
+  <select id="store-select">Store Name</select>
+  <script>
+    var storeobject = {
+      Store1: 'Store 1',
+      Store2: 'Store 2',
+      Store3: 'Store 3'
+    };
+    var select = document.getElementById("store-select");
+    for (var index in storeobject) {
+      select.options[select.options.length] = new Option(storeobject[index], index);
+    }
+  </script>
+  <button type="submit">Browse</button>
+</div>
+<div id="item-box">
+  <input type="text" placeholder="Search here for your item"/>
+  <button type="submit" name="search-item">Search</button>
+</div>

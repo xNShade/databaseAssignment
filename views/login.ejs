@@ -1,6 +1,6 @@
 <%- include("header") -%>
 <div class="" name="login-form">
-  <form class="" action="" method="post">
+  <form class="" action="/login" method="post">
     <div class="username-div">
       Username<input type="text" name="uname" value="">
     </div>
@@ -8,9 +8,8 @@
       Password<input type="password" name="upassword" value="">
     </div>
     <div class="login-buttons">
-      <!--For the onclick, you can have it be a function call to query DB -->
-      <input type="button" onclick="" value="Login">
-      <input type="reset" name="" value="Clear">
+      <input type="button" value="Login">
+      <input type="reset" value="Clear">
     </div>
   </form>
 </div>

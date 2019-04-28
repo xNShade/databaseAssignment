@@ -1,6 +1,25 @@
-<!DOCTYPE html>
 <%- include("header") -%>
-<%- include("selectlist") -%>
+<form class="" action="/store" method="post">
+  <div id="store-listbox-and-button">
+    <select id="store-select"name="storeselect"required="true">Store Name</select>
+    <script type="text/javascript">
+      var storeobject = {
+        Store1: 'Store1',
+        Store2: 'Store2',
+        Store3: 'Store3'
+      };
+      var select = document.getElementById("store-select");
+      for (var index in storeobject) {
+        select.options[select.options.length] = new Option(storeobject[index], index);
+      }
+    </script>
+    <button type="submit">Browse</button>
+  </div>
+  <div id="item-box">
+    <input type="text" placeholder="Search here for your item" name="searchitem" />
+    <button type="submit">Search</button>
+  </div>
+</form>
 </body>
 
 </html>

@@ -2,10 +2,14 @@
 
 const express = require("express");
 const bodyParser = require("body-parser"); //Deprecated
-//use app.use(bodyParser.json());
+
 var mysql = require("mysql");
 
 const app = express();
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
 
 var strStore;
 
@@ -30,12 +34,12 @@ con.connect(function(err) {
   console.log('Connected to the MySQL server.');
 });
 
-
 //--------- Ryan - end DB connection section
 
 app.get("/", function(req, res) {
   res.render('index', {});
 });
+
 
 app.get("/search", function(req, res) {
   con.query("SELECT * from store", function(err, results, fields) {

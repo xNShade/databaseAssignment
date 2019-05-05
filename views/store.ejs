@@ -1,0 +1,39 @@
+<%- include("header") -%>
+<form class="" action="/storeselected" method="post">
+  <div id="store-listbox-and-button">
+    <select id="store-select" name="selection">Store Name</select>
+    <script>
+      var storeobject = {
+      Store1: 'Store1',
+      Store2: 'Store2',
+      Store3: 'Store3',
+      Store4: 'Store4',
+      Store5: 'Store5',
+      Store6: 'Store6',
+      Store7: 'Store7',
+      Store8: 'Store8',
+      Store9: 'Store9',
+      Store10: 'Store10',
+      Store11: 'Store11',
+      Store12: 'Store12',
+      Store13: 'Store13',
+      Store14: 'Store14',
+      Store15: 'Store15',
+      Store16: 'Store16',
+      Store17: 'Store17',
+      Store18: 'Store18',
+      Store19: 'Store19',
+      Store20: 'Store20'
+    };
+    var select = document.getElementById("store-select");
+    for (var index in storeobject) {
+      select.options[select.options.length] = new Option(storeobject[index], index);
+    }
+    </script>
+    <button type="submit" name="browse">Browse</button>
+  </div>
+</form>
+
+</body>
+
+</html>

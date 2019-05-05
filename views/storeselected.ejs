@@ -1,0 +1,45 @@
+<%- include("header") -%>
+<form class="deleteitem" action="/deleteitem" method="post">
+<div class="storeproducts">
+  <table style="width:75%" border="1" border-spacing="2px">
+    <tr>
+      <th>Store Number</th>
+      <th>Product Name</th>
+      <th>Size</th>
+      <th>Brand</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>UPC</th>
+      <th>Delete?</th>
+    </tr>
+    <% for(let i = 0;i < storeQuery.length;i++){ %>
+    <tr>
+      <td>
+        <%= storeQuery[i].store_store_number %>
+      </td>
+      <td>
+        <%= storeQuery[i].product_name %>
+      </td>
+      <td>
+        <%= storeQuery[i].size %>
+      </td>
+      <td>
+        <%= storeQuery[i].brand %>
+      </td>
+      <td>
+        <%= storeQuery[i].price %>
+      </td>
+      <td>
+        <%= storeQuery[i].inventory_item_quantity %>
+      </td>
+      <td>
+        <%= storeQuery[i].upc_code %>
+      </td>
+      <td><input type="checkbox" name="deletepress" value="<%=storeQuery[i].upc_code %>" onchange="this.form.submit()">Delete</td>
+    </tr>
+    <% } %>
+  </table>
+</div>
+</form>
+</body>
+</html>

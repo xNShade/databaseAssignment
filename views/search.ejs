@@ -1,0 +1,30 @@
+<%- include("header") -%>
+
+<div class="itemsqueried">
+  <table style="width:75%" border="1" border-spacing="2px">
+    <tr>
+      <th>Store Number</th>
+      <th>Store Type</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Open</th>
+      <th>Close</th>
+    </tr>
+  <% for(let i = 0;i < searchValue.length;i++){ %>
+    <tr>
+    <td><%= searchValue[i].store_number %></td>
+    <td><%= searchValue[i].store_type %></td>
+    <td><%= searchValue[i].store_city %></td>
+    <td><%= searchValue[i].store_state %></td>
+    <td><%= searchValue[i].store_zip %></td>
+    <td><%= searchValue[i].open_time %></td>
+    <td><%= searchValue[i].close_time %></td>
+    </tr>
+  <% } %>
+  </table>
+</div>
+
+</body>
+
+</html>
